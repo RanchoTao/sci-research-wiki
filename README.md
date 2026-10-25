@@ -20,11 +20,11 @@
 | 02 Git 协作 | [版本化科研实验](docs/02-git/versioned-experiment.md) |
 | 03 ML Engineering | [实验协议与数据划分](docs/03-ml-engineering/experiment-protocol.md) |
 | 04 Literature | [从论文到证据卡](docs/04-literature/read-a-paper.md) |
-| 05 Research | [假设、基线与消融](docs/05-research/hypothesis-and-baselines.md) |
+| 05 Research | [假设、基线与消融](docs/05-research/hypothesis-and-baselines.md)、[数学命题与反例](docs/05-research/mathematical-proof-and-counterexample.md) |
 | 06 AI for Research | [核验与证据链](docs/06-ai-for-research/verification-ledger.md) |
 | 07 Writing | [实验报告](docs/07-writing/write-a-report.md) |
 | 08 Research Life | [每周研究汇报](docs/08-research-life/weekly-research-update.md) |
-| 09 Projects | [合成回归端到端实验](docs/09-projects/synthetic-experiment.md) |
+| 09 Projects | [合成回归端到端实验](docs/09-projects/synthetic-experiment.md)、[精确矩阵反例](docs/09-projects/matrix-counterexample.md) |
 
 历史 `00-...` 到 `09-...` 顶层目录暂时保留作为原始策划档案，不做破坏性迁移；**正式网站内容以 `docs/` 为准**。首版每章一篇实用教程，不代表整个章节已经穷尽。详细待办见 [ROADMAP](ROADMAP.md)。
 
@@ -47,10 +47,11 @@ python -m unittest discover -s tests -v
 mkdocs build --strict
 ```
 
-完整教学实验只依赖 Python 标准库：
+两条教学实验都只依赖 Python 标准库：
 
 ```bash
 python examples/synthetic-linear/run.py --out-dir results/synthetic-linear
+python examples/matrix-counterexample/check.py
 ```
 
 ## 网站部署

@@ -5,6 +5,7 @@
 ## 本模块的实践教程
 
 - [假设、基线与消融](hypothesis-and-baselines.md)
+- [数学命题与精确反例](mathematical-proof-and-counterexample.md)
 
 ## 学完后应当交付
 

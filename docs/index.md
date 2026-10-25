@@ -16,6 +16,13 @@
   <a class="sr-card" href="06-ai-for-research/verification-ledger/"><strong>AI 帮我做了很多研究</strong><span>区分建议、证据、验证状态和学术主张。</span></a>
 </div>
 
+## 两条科研实践线
+
+- **实验与机器学习**：[固定协议的合成回归实验](09-projects/synthetic-experiment.md)：比较 baseline、消融和多种子测试结果。
+- **数学与理论**：[精确矩阵反例](09-projects/matrix-counterexample.md)：严格写出命题、构造反例、检查量词并给出正确命题的推导。
+
+两条路线共享文献版本核查、证据记录和严谨写作，但验收标准不同：实验结果不能替代数学证明，有限枚举也不能证明一般性定理。
+
 ## 十个模块，一次科研循环
 
 **开始** → [计算环境](01-computing/index.md) → [Git](02-git/index.md) → [实验工程](03-ml-engineering/index.md) → [文献](04-literature/index.md) → [研究设计](05-research/index.md) → [AI 辅助](06-ai-for-research/index.md) → [写作](07-writing/index.md) → [协作](08-research-life/index.md) → [完整项目](09-projects/index.md)。

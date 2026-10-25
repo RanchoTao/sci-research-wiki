@@ -9,6 +9,7 @@
 | 第一次科研，问题也没定 | [一次科研循环](00-getting-started/research-loop.md) | 1 页问题与交付清单 |
 | 已有论文和代码，但复现不了 | [Python 环境](01-computing/python-environment.md) → [实验协议](03-ml-engineering/experiment-protocol.md) | 可重跑的 baseline 与环境记录 |
 | 在做原创研究，或依赖 AI 自动化 | [文献证据卡](04-literature/read-a-paper.md) → [研究设计](05-research/hypothesis-and-baselines.md) → [核验记录](06-ai-for-research/verification-ledger.md) | 主张—证据—结论的追踪表 |
+| 偏理论数学、希望训练证明与反例 | [数学命题与反例](05-research/mathematical-proof-and-counterexample.md) → [矩阵案例](09-projects/matrix-counterexample.md) | 可检查的反例和正确条件下的证明 |
 
 ## 推荐依赖关系
 

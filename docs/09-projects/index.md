@@ -5,6 +5,7 @@
 ## 本模块的实践教程
 
 - [可运行示例：合成回归](synthetic-experiment.md)
+- [可运行示例：矩阵反例](matrix-counterexample.md)
 
 ## 学完后应当交付
 
