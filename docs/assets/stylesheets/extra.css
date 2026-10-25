@@ -1,0 +1,40 @@
+:root {
+  --sr-ink: #172936;
+  --sr-quiet: #58717a;
+  --sr-line: rgba(40, 89, 97, .16);
+  --sr-teal: #087d79;
+  --sr-paper: #f6f8f6;
+}
+[data-md-color-scheme="slate"] {
+  --sr-ink: #f0f7f6;
+  --sr-quiet: #b2c8c7;
+  --sr-line: rgba(212, 237, 232, .18);
+  --sr-teal: #77d9c7;
+  --sr-paper: #142326;
+}
+.md-grid { max-width: 82rem; }
+.md-typeset { font-size: .82rem; line-height: 1.76; }
+.md-typeset h1, .md-typeset h2 { letter-spacing: -.025em; }
+.sr-hero {
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  border-radius: 1.2rem;
+  border: 1px solid var(--sr-line);
+  background: radial-gradient(circle at 90% 15%, rgba(24, 163, 151, .16), transparent 38%),
+              radial-gradient(circle at 3% 90%, rgba(80, 145, 203, .13), transparent 48%),
+              var(--sr-paper);
+  margin-bottom: 1.8rem;
+}
+.sr-hero small { color: var(--sr-teal); font-weight: 750; letter-spacing: .08em; }
+.md-typeset .sr-hero h1 { color: var(--sr-ink); font-size: clamp(1.85rem, 4vw, 3.6rem); line-height: 1.16; }
+.sr-hero p { color: var(--sr-quiet); max-width: 44rem; font-size: 1.05em; }
+.sr-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.5rem; }
+.md-typeset .sr-actions .md-button { border-radius: .5rem; }
+.md-typeset .sr-actions .md-button--primary { background: #087d79; border-color: #087d79; color: white; }
+.sr-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin: 1rem 0 2rem; }
+.sr-card { display: block; padding: 1.1rem; border: 1px solid var(--sr-line); border-radius: .75rem; background: var(--sr-paper); text-decoration: none; }
+.md-typeset .sr-card { color: var(--sr-ink); }
+.md-typeset .sr-card:hover, .md-typeset .sr-card:focus-visible { border-color: var(--sr-teal); }
+.sr-card strong { display: block; font-size: 1.02em; }
+.sr-card span { display: block; margin-top: .45rem; color: var(--sr-quiet); }
+@media (max-width: 52rem) { .sr-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
