@@ -1,0 +1,85 @@
+site_name: Sci Research Wiki
+site_description: 从第一次进入实验室，到完成一次可复现的科研循环
+site_url: https://ranchotao.com/sci-research-wiki/
+repo_url: https://github.com/RanchoTao/sci-research-wiki
+repo_name: RanchoTao/sci-research-wiki
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2026 Sci Research Wiki contributors
+theme:
+  name: material
+  language: zh
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.action.edit
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: 深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: 浅色模式
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+extra_css:
+  - assets/stylesheets/extra.css
+nav:
+  - 首页: index.md
+  - 如何学习: learning-path.md
+  - 00 开始科研:
+      - 导览: 00-getting-started/index.md
+      - 第一次科研循环: 00-getting-started/research-loop.md
+  - 01 计算环境:
+      - 导览: 01-computing/index.md
+      - Python 环境复现: 01-computing/python-environment.md
+  - 02 Git 协作:
+      - 导览: 02-git/index.md
+      - 版本化科研实验: 02-git/versioned-experiment.md
+  - 03 机器学习工程:
+      - 导览: 03-ml-engineering/index.md
+      - 实验协议与数据划分: 03-ml-engineering/experiment-protocol.md
+  - 04 文献阅读:
+      - 导览: 04-literature/index.md
+      - 从论文到证据卡: 04-literature/read-a-paper.md
+  - 05 科研方法:
+      - 导览: 05-research/index.md
+      - 假设、基线与消融: 05-research/hypothesis-and-baselines.md
+      - 数学命题与精确反例: 05-research/mathematical-proof-and-counterexample.md
+  - 06 AI 辅助科研:
+      - 导览: 06-ai-for-research/index.md
+      - 证据链与核验清单: 06-ai-for-research/verification-ledger.md
+  - 07 写作与表达:
+      - 导览: 07-writing/index.md
+      - 把实验写成报告: 07-writing/write-a-report.md
+  - 08 科研协作:
+      - 导览: 08-research-life/index.md
+      - 每周研究汇报: 08-research-life/weekly-research-update.md
+  - 09 完整项目:
+      - 导览: 09-projects/index.md
+      - 可运行示例：合成回归: 09-projects/synthetic-experiment.md
+      - 可运行示例：矩阵反例: 09-projects/matrix-counterexample.md
+  - 参考与致谢: credits.md

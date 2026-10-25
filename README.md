@@ -1,164 +1,67 @@
-# 科研基础 Wiki | Sci Research Wiki
+# Sci Research Wiki · 科研基础 Wiki
 
-面向本科生与科研初学者的科研基础知识库。
+> 从第一次进入实验室，到独立完成一次有证据、可复现、可交流的科研循环。
 
-目标不是把 Linux、PyTorch、Git、论文写作分别做成彼此孤立的教程，而是回答一个更实际的问题：
+面向本科生与科研初学者的开源科研工作流手册。与按课程、软件或编程语言罗列知识点不同，本项目以 **研究问题 → 文献 → 环境与代码 → baseline → 实验与验证 → 结果 → 写作与汇报** 为主线。
 
-> **一个人从第一次进入实验室，到能够独立完成一次科研循环，中间到底需要会什么？**
+## 阅读
 
-本仓库目前处于 **框架搭建阶段**。内容会逐步补全，也欢迎通过 Issue / Pull Request 共同维护。
+- [在线 Wiki · ranchotao.com/sci-research-wiki](https://ranchotao.com/sci-research-wiki/)
+- [学习路线](docs/learning-path.md)
+- [可运行教学实验](docs/09-projects/synthetic-experiment.md)
+- [建设路线图与验收标准](ROADMAP.md)
 
----
+## 模块
 
-## 科研路线图
+| 模块 | 首版实际教程 |
+| --- | --- |
+| 00 开始科研 | [第一次科研循环](docs/00-getting-started/research-loop.md) |
+| 01 计算环境 | [Python 环境复现](docs/01-computing/python-environment.md) |
+| 02 Git 协作 | [版本化科研实验](docs/02-git/versioned-experiment.md) |
+| 03 ML Engineering | [实验协议与数据划分](docs/03-ml-engineering/experiment-protocol.md) |
+| 04 Literature | [从论文到证据卡](docs/04-literature/read-a-paper.md) |
+| 05 Research | [假设、基线与消融](docs/05-research/hypothesis-and-baselines.md)、[数学命题与反例](docs/05-research/mathematical-proof-and-counterexample.md) |
+| 06 AI for Research | [核验与证据链](docs/06-ai-for-research/verification-ledger.md) |
+| 07 Writing | [实验报告](docs/07-writing/write-a-report.md) |
+| 08 Research Life | [每周研究汇报](docs/08-research-life/weekly-research-update.md) |
+| 09 Projects | [合成回归端到端实验](docs/09-projects/synthetic-experiment.md)、[精确矩阵反例](docs/09-projects/matrix-counterexample.md) |
 
-```text
-第一次做科研
-    ↓
-计算环境
-Linux → SSH → Python 环境 → VS Code → Git
-    ↓
-跑实验
-Data → PyTorch → Train → Eval → Debug
-    ↓
-进入研究
-读论文 → 找论文 → Related Work → 找问题
-    ↓
-验证问题
-Hypothesis → Baseline → Experiment → Statistics
-    ↓
-形成成果
-Figures → Paper → GitHub → Presentation
-    ↓
-完整科研循环
+历史 `00-...` 到 `09-...` 顶层目录暂时保留作为原始策划档案，不做破坏性迁移；**正式网站内容以 `docs/` 为准**。首版每章一篇实用教程，不代表整个章节已经穷尽。详细待办见 [ROADMAP](ROADMAP.md)。
+
+## 本地运行
+
+Python 3.10+：
+
+```bash
+python -m venv .venv
+# macOS / Linux: source .venv/bin/activate
+# Windows PowerShell: .venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+mkdocs serve
 ```
 
----
+发布前检查：
 
-## 目录
-
-### 00. Getting Started
-- [科研学习路线](00-getting-started/README.md)
-- 第一次科研项目应该怎么开始
-- 如何使用本 Wiki
-
-### 01. Computing
-- [计算环境与服务器](01-computing/README.md)
-- Linux / SSH / 文件传输 / 后台任务
-- Conda / venv / pip / requirements
-- CUDA / PyTorch 版本
-- VS Code Remote SSH
-- Docker
-- Slurm / 集群
-
-### 02. Git
-- [Git 与科研协作](02-git/README.md)
-- clone / commit / push / pull
-- branch / merge / PR
-- 冲突处理与多人协作
-
-### 03. ML Engineering
-- [机器学习实验与科研工程](03-ml-engineering/README.md)
-- PyTorch
-- NumPy / Pandas
-- Jupyter
-- Debug
-- 实验流程
-- 绘图
-- Hugging Face
-
-### 04. Literature
-- [论文阅读与文献管理](04-literature/README.md)
-- 如何读论文
-- 如何找论文
-- Scholar / arXiv / Semantic Scholar
-- Zotero
-- Related Work
-
-### 05. Research
-- [科研方法与实验设计](05-research/README.md)
-- 如何找到科研问题
-- 如何判断 idea 是否值得做
-- baseline / ablation / control
-- reproducibility
-- statistics / metrics
-
-### 06. AI for Research
-- [AI 辅助科研](06-ai-for-research/README.md)
-- ChatGPT / Codex / Claude Code
-- AI 辅助编程
-- AI 辅助读论文与实验
-- 幻觉、验证与证据链
-
-### 07. Writing
-- [科研写作与表达](07-writing/README.md)
-- 论文写作
-- 图表与结果叙事
-- LaTeX
-- README
-- 审稿标准
-
-### 08. Research Life
-- [科研协作与组会](08-research-life/README.md)
-- 如何向导师汇报
-- 如何参加组会
-- 科研汇报 / PPT
-
-### 09. Projects
-- [完整科研循环实战](09-projects/README.md)
-- 找论文 → clone → 配环境 → 跑实验 → 改代码 → 出图 → 写作 → GitHub
-
----
-
-## 这个 Wiki 的原则
-
-1. **以科研流程为主线，而不是以软件功能为主线。**
-2. **优先解决真实科研中高频遇到的问题。**
-3. **理论解释服务于实际操作。**
-4. **代码、实验和结论尽量可复现。**
-5. **AI 可以参与科研流程，但关键事实必须回到论文、代码、日志和实验结果验证。**
-6. **先给出最小可用方法，再逐步进入进阶内容。**
-
----
-
-## 推荐阅读方式
-
-如果你刚开始科研，建议按以下顺序：
-
-```text
-00 Getting Started
-→ 01 Computing
-→ 02 Git
-→ 03 ML Engineering
-→ 04 Literature
-→ 05 Research
-→ 06 AI for Research
-→ 07 Writing
-→ 08 Research Life
-→ 09 Projects
+```bash
+python -m unittest discover -s tests -v
+mkdocs build --strict
 ```
 
-已有一定经验的读者可以直接按问题检索对应章节。
+两条教学实验都只依赖 Python 标准库：
 
----
+```bash
+python examples/synthetic-linear/run.py --out-dir results/synthetic-linear
+python examples/matrix-counterexample/check.py
+```
 
-## 当前状态
+## 网站部署
 
-- [x] 仓库与目录结构
-- [x] 基础章节框架
-- [ ] 第一批基础教程
-- [ ] 完整科研循环示例
-- [ ] 视频课程
-- [ ] 静态文档站 / 搜索
+`ranchotao.com` 已由个人主页仓库 `RanchoTao.github.io` 的 `CNAME` 指向 GitHub Pages。本 Wiki 为 GitHub 项目站点，正式访问路径是 `https://ranchotao.com/sci-research-wiki/`，不需要另外配置子域名或 Vercel。
 
----
+`.github/workflows/wiki.yml` 会在 PR 上运行测试和严格构建，在审核分支或 `main` 的 push 上发布 Pages。审核分支与 `main` 共享同一个项目站点 URL，**不是两个独立的 Pages 预览站**；审核完成后应只保留 `main` 自动发布，并删除临时审核分支触发规则。发布成功以 [Actions](https://github.com/RanchoTao/sci-research-wiki/actions) 为准；HTTPS 与页面可达性需在浏览器验证。
 
-## Contributing
+## 贡献与来源
 
-欢迎提交 Issue、纠错和 Pull Request。
+欢迎修正失效链接、命令、教学案例、页面结构和实验验证。先看 [贡献指南](CONTRIBUTING.md)与[参考致谢](docs/credits.md)。内容不得直接搬运受版权保护的第三方教程、论文 PDF、私有实验数据或泄露个人信息。AI 生成的技术论断须回到原始出处或实际运行核验。
 
-贡献前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
-
----
-
-> 本项目首先服务于“第一次真正开始做科研的人”。如果一篇文章不能帮助读者更快完成下一步科研动作，它就还不够好。
+本项目与 [BIMSA MathAI Wiki](https://github.com/RanchoTao/BIMSA-MathAI/) 面向不同需求：后者整理项目课程资源，本项目提供可迁移的科研工作流。

@@ -1,0 +1,16 @@
+# 科研方法
+
+把 idea 转换为假设、反例、对照实验和明确停止条件。
+
+## 本模块的实践教程
+
+- [假设、基线与消融](hypothesis-and-baselines.md)
+- [数学命题与精确反例](mathematical-proof-and-counterexample.md)
+
+## 学完后应当交付
+
+写出主要指标、对照组和失败解释。
+
+## 使用建议
+
+请完成教程中的练习并保留输出，再进入下一模块。已有相关经验可直接跳到[完整实验](../09-projects/synthetic-experiment.md)，遇到阻塞时返回本模块检索。
