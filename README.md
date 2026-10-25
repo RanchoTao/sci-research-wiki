@@ -6,7 +6,7 @@
 
 ## 阅读
 
-- [网页书（GitHub Pages；需仓库 Pages 启用且部署成功）](https://ranchotao.github.io/sci-research-wiki/)
+- [在线 Wiki · ranchotao.com/sci-research-wiki](https://ranchotao.com/sci-research-wiki/)
 - [学习路线](docs/learning-path.md)
 - [可运行教学实验](docs/09-projects/synthetic-experiment.md)
 - [建设路线图与验收标准](ROADMAP.md)
@@ -56,7 +56,9 @@ python examples/matrix-counterexample/check.py
 
 ## 网站部署
 
-`.github/workflows/wiki.yml` 对 PR 执行测试和严格构建；合并到 `main` 后尝试 Pages 部署。仓库所有者还需在 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。未检查 Actions 与 Pages 结果前，不应声称网站已经上线。
+`ranchotao.com` 已由个人主页仓库 `RanchoTao.github.io` 的 `CNAME` 指向 GitHub Pages。本 Wiki 为 GitHub 项目站点，正式访问路径是 `https://ranchotao.com/sci-research-wiki/`，不需要另外配置子域名或 Vercel。
+
+`.github/workflows/wiki.yml` 会在 PR 上运行测试和严格构建，在审核分支或 `main` 的 push 上发布 Pages。审核分支与 `main` 共享同一个项目站点 URL，**不是两个独立的 Pages 预览站**；审核完成后应只保留 `main` 自动发布，并删除临时审核分支触发规则。发布成功以 [Actions](https://github.com/RanchoTao/sci-research-wiki/actions) 为准；HTTPS 与页面可达性需在浏览器验证。
 
 ## 贡献与来源
 
